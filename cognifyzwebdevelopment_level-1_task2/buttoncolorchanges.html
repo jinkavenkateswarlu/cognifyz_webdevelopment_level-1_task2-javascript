@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Color Changing Button</title>
+<style>
+  /* Define initial button style */
+  #colorButton {
+    padding: 10px 20px;
+    background-color: blue;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  .center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+</style>
+</head>
+<body>
+    <div class="top:center">
+    <marquee><h1><b>click me to change the color</b></h1></marquee>
+    </div>
+
+<!-- Button element -->
+<div class="center">
+<button id="colorButton"><b>Click me to change color</b></button>
+</div>
+
+<script>
+  // Get the button element
+  const button = document.getElementById('colorButton');
+
+  // Add click event listener to the button
+  button.addEventListener('click', function() {
+    // Generate a random color
+    const randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+    
+    // Set the button's background color to the random color
+    button.style.backgroundColor = randomColor;
+  });
+</script>
+
+</body>
+</html>

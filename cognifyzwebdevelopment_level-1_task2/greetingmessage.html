@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Greeting Based on Current Time</title>
+</head>
+<body>
+
+<script>
+    // Get the current hour
+    var currentHour = new Date().getHours();
+
+    // Initialize greeting message
+    var greeting;
+
+    // Set greeting based on the current hour
+    if (currentHour < 12) {
+        greeting = "Good morning friends my name is venkateswarlu!";
+    } else if (currentHour < 18) {
+        greeting = "Good afternoon friends how are you!";
+    } else {
+        greeting = "Good evening madam you looking very buetiful!";
+    }
+
+    // Display the greeting message in an alert box
+    alert(greeting);
+</script>
+
+</body>
+</html>
